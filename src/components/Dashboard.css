@@ -1,0 +1,203 @@
+.dashboard {
+  padding: 20px;
+}
+
+.filters-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: var(--background-color);
+  border: 1px solid var(--text-color);
+  border-radius: 8px;
+}
+
+.filter-select {
+  margin-bottom: 15px;
+}
+
+.filter-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.table-section {
+  margin-bottom: 10px;
+  overflow-x: auto;
+}
+
+.table {
+  background-color: var(--background-color);
+  min-width: 750px; /* Ensures table doesn't get too squeezed */
+}
+
+.table thead th {
+  background-color: var(--text-color);
+  color: var(--primary-color);
+  border-color: var(--text-color);
+  white-space: nowrap;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(48, 234, 3, 0.1);
+}
+
+/* Custom styles for the table */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-bordered {
+  border: 1px solid var(--text-color);
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid var(--text-color);
+}
+
+/* Pagination Section Styles */
+.pagination-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.rows-per-page {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-color);
+}
+
+.rows-per-page select {
+  padding: 4px 8px;
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.rows-per-page select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.page-info {
+  color: var(--text-color);
+  white-space: nowrap;
+}
+
+.pagination {
+  display: flex;
+  gap: 5px;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.pagination .page-item .page-link {
+  border: none;
+  padding: 8px 12px;
+  color: var(--text-color);
+  background: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 4px;
+}
+
+.pagination .page-item:not(.active) .page-link:hover {
+  background-color: rgba(48, 234, 3, 0.1);
+  border-radius: 4px;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: rgba(0, 0, 0, 0.3);
+  cursor: not-allowed;
+  background: none;
+}
+
+/* Hide the focus outline */
+.pagination .page-link:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.cm-code-link {
+  color: var(--primary-color);
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.cm-code-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  .dashboard {
+    padding: 10px;
+  }
+
+  .filters-section {
+    padding: 15px;
+  }
+
+  .filter-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pagination-container {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rows-per-page {
+    margin-bottom: 10px;
+  }
+
+  .table-responsive {
+    margin-bottom: 15px;
+    border: 0;
+  }
+}
+
+/* Tablet Responsive Styles */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .filters-section {
+    padding: 15px;
+  }
+
+  .filter-buttons {
+    justify-content: flex-end;
+  }
+}
+
+/* Ensure buttons are full width on very small screens */
+@media screen and (max-width: 480px) {
+  .filter-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .filter-buttons button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .pagination .page-item .page-link {
+    padding: 6px 10px;
+  }
+} 
