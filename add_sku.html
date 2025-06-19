@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html dir="ltr" lang="en-US" class="k-webkit k-webkit137">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="GENERATOR" content="Microsoft SharePoint">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script type="text/javascript">var _browserisFlight = true;</script>
+  <meta http-equiv="Expires" content="0">
+  <meta name="msapplication-TileImage" content="/_layouts/15/images/SharePointMetroAppTile.png">
+  <meta name="msapplication-TileColor" content="#0072C6">
+  <title>
+
+    SDP Tools
+
+  </title>
+
+
+
+</head>
+
+<!-- CSS Files -->
+
+<link rel="stylesheet" href="./Business Alerts Process - SalesHubDocumentrepository_files/style-navbar.css">
+<link rel="stylesheet" href="./Business Alerts Process - SalesHubDocumentrepository_files/style-internal-page.css">
+<link rel="stylesheet" href="./Business Alerts Process - SalesHubDocumentrepository_files/sharepointOverwrite.css">
+<link rel="preload" as="font"
+  href="https://haleon.sharepoint.com/sites/BusinessAlertsProcess/CodeFiles/fonts/NewHeroAccess-Regular.woff2"
+  type="font/woff2">
+<link rel="preload" as="font"
+  href="https://haleon.sharepoint.com/sites/BusinessAlertsProcess/CodeFiles/fonts/NewHeroAccess-Super.woff2"
+  type="font/woff2">
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- JS Files -->
+<script type="text/javascript"
+  src="./Business Alerts Process - SalesHubDocumentrepository_files/jquery.min.js.download"></script>
+<script type="text/javascript"
+  src="./Business Alerts Process - SalesHubDocumentrepository_files/bootstrap.min.js.download"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="navbar-brand">
+        <a href="javascript:(void0)"><img
+            src="./Business Alerts Process - SalesHubDocumentrepository_files/haleon-logo.png" alt="Haleon"
+            data-themekey="#"></a>
+
+      </div>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#salesHubNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="salesHubNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="https://haleon.sharepoint.com/sites/BusinessAlertsProcess/SitePages/SalesHubHomePage.aspx">
+            <i class="ri-home-5-line"></i>
+            <span>Home</span>
+          </a>
+        </li>
+
+      </ul>
+      </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div >
+
+  <div class="brdr1px mb10"></div>
+
+  <div class="container">
+    <div class="card mb-3">
+      <div class="card-header bg-primary text-white" style="background-color:#30ea03 !important">
+        <h5 class="mb-0">SKU Details</h5>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>CM Code</label>
+              <input type="text" id="skuCode" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>CM Description</label>
+              <input type="text" id="skuCode" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>SKU Code</label>
+              <input type="text" id="skuCode" class="form-control">
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>SKU Description</label>
+              <input type="text" id="skuDescription" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Purchased Quantity</label>
+              <input type="number" id="purchasedQuantity" class="form-control">
+            </div>
+          </div>
+        
+         
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Formulation Reference</label>
+              <input type="text" id="filterpoupBrand" class="form-control" multiple="multiple">
+            </div>
+          </div>
+           
+          <div class="col-md-6">
+            <div class="form-group d-flex align-items-end">
+              <div class="flex-grow-1">
+                <label>SKU Reference  </label>
+                <input type="text" id="formulationReference" class="form-control">
+              </div>
+            <button type="button" class="btn btn-success ms-2" style="background-color: #000000;" id="searchSkuBtn">
+  Search SKU Component
+</button>
+
+            
+
+
+            </div>
+              <button type="button" class="btn btn-success ms-2" data-bs-toggle="modal" style="margin-top: 10px;
+    margin-bottom: 10px;background-color: #000000;"                data-bs-target="#componentModal">
+                <i class="fas fa-plus"></i> Add Component
+              </button>
+          </div>
+
+      <div class="col-md-12" id="additionalFormulations" style="display: none;">
+  <p style="font-weight: bold;">Note: Data Grid will be populated if you choose the SKU Reference or add a Component.</p>
+  <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+    <table class="table table-bordered table-striped table-hover">
+      <thead class="table-light sticky-top">
+        <tr>
+          <th>Actions</th>
+          <th>Material Type</th>
+          <th>Component Reference</th>
+          <th>Component Code</th>
+          <th>Component Description</th>
+          <th>Valid From</th>
+          <th>Valid To</th>
+          <th>Material Group</th>
+          <th>QTY</th>
+          <th>UoM</th>
+          <th>Base UoM</th>
+          <th>Packaging Type</th>
+          <th>Weight Type</th>
+          <th>Unit Measure</th>
+          <th>% Post-Consumer</th>
+          <th>% Post-Industrial</th>
+          <th>% Chemical</th>
+          <th>% Bio-sourced</th>
+          <th>Structure</th>
+          <th>Color/Opacity</th>
+          <th>Packaging Level</th>
+          <th>Dimensions</th>
+          <th>Spec Evidence</th>
+          <th>Recycled Evidence</th>
+          <th>Proof File</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <button class="btn btn-sm btn-warning me-1"><i class="fas fa-pen"></i></button>
+            <button class="btn btn-sm btn-danger"><i class="fas fa-times"></i></button>
+          </td>
+          <td>Plastic</td>
+          <td>REF123</td>
+          <td>CODE456</td>
+          <td>Plastic Bottle</td>
+          <td>2024-01-01</td>
+          <td>2025-01-01</td>
+          <td>Group A</td>
+          <td>100</td>
+          <td>kg</td>
+          <td>kg</td>
+          <td>Box</td>
+          <td>Light</td>
+          <td>kg</td>
+          <td>30%</td>
+          <td>20%</td>
+          <td>10%</td>
+          <td>Yes</td>
+          <td>Multi-layer 60/40</td>
+          <td>Clear</td>
+          <td>Primary</td>
+          <td>10x10x20</td>
+          <td>Doc123</td>
+          <td>Yes</td>
+          <td>proof.pdf</td>
+          <td>2025-06-01</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+      <div class="col-md-6">
+            <div class="form-group">
+              <button type="button" class="btn btn-primary" style="background-color:#30ea03;" id="uploadButton">Submit</button>
+            </div>
+          </div>
+</div>
+
+
+
+      
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="componentModal" tabindex="-1" aria-labelledby="componentModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white" style="background-color:#30ea03 !important">
+        <h5 class="modal-title" id="componentModalLabel">Add Component Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row g-3">
+            <!-- Begin Fields -->
+            <div class="col-md-6"><label>Material Type</label><input type="text" id="materialType" class="form-control">
+            </div>
+            <div class="col-md-6"><label>Component Reference</label><input type="text" id="componentReference"
+                class="form-control"></div>
+            <div class="col-md-6"><label>Component Code</label><input type="text" id="componentCode"
+                class="form-control"></div>
+             <div class="col-md-6"><label>Component
+                Description</label><input type="text" id="validFrom" class="form-control"></div>
+              <div class="col-md-6"><label>Component
+                Valid Date From</label><input type="text" id="validFrom" class="form-control"></div>
+            
+            <div class="col-md-6"><label>Component Valid Date To</label><input type="text" id="validTo"
+                class="form-control"></div>
+            <div class="col-md-6"><label>Component Material Group (Category)</label><input type="text"
+                id="materialGroup" class="form-control"></div>
+            <div class="col-md-6"><label>Component QTY</label><input type="text" id="componentQty" class="form-control">
+            </div>
+            <div class="col-md-6"><label>Component UoM</label><input type="text" id="componentUom" class="form-control">
+            </div>
+            <div class="col-md-6"><label>Component Base UoM</label><input type="text" id="baseUom" class="form-control">
+            </div>
+            <div class="col-md-6"><label>Component Packaging Type</label><input type="text" id="packagingType"
+                class="form-control"></div>
+            <div class="col-md-6"><label>Component Unit Weight Type</label><input type="text" id="weightType"
+                class="form-control"></div>
+            <div class="col-md-6"><label>Component Unit of Measure</label><input type="text" id="unitMeasure"
+                class="form-control"></div>
+            <div class="col-md-6"><label>% Mechanical Post-Consumer Recycled Content</label><input type="text"
+                id="postConsumer" class="form-control"></div>
+            <div class="col-md-6"><label>% Mechanical Post-Industrial Recycled Content</label><input type="text"
+                id="postIndustrial" class="form-control"></div>
+            <div class="col-md-6"><label>% Chemical Recycled Content</label><input type="text" id="chemicalRecycled"
+                class="form-control"></div>
+            <div class="col-md-6"><label>% Bio-sourced?</label><input type="text" id="bioSourced" class="form-control">
+            </div>
+            <div class="col-md-6"><label>Material Structure (Multimaterials with % wt)</label><input type="text"
+                id="materialStructure" class="form-control"></div>
+            <div class="col-md-6"><label>Component Packaging Colour/Opacity</label><input type="text"
+                id="packagingColor" class="form-control"></div>
+            <div class="col-md-6"><label>Component Packaging Level</label><input type="text" id="packagingLevel"
+                class="form-control"></div>
+            <div class="col-md-6"><label>Component Dimension (3D-LxWxH, 2D LxW)</label><input type="text"
+                id="dimensions" class="form-control"></div>
+            <div class="col-md-6"><label>Packaging Specification Evidence</label><input type="text" id="specEvidence"
+                class="form-control"></div>
+            <div class="col-md-6"><label>Evidence of Chemical Recycled or Bio-source</label><input type="text"
+                id="evidence" class="form-control"></div>
+                 <div class="col-md-6"><label>Last Updated Date</label><input type="text" id="lastUpdated"
+                class="form-control"></div>
+            <div class="col-md-6">
+              <label>Proof of Evidence File <span class="text-danger">*</span></label>
+              <input type="file" id="evidenceFile" class="form-control">
+              <small class="text-muted" style="color: red !important;">Max file size: 50MB</small>
+            </div>
+           
+           
+            <!-- End Fields -->
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<footer class="footerBg">
+  <div class="createdBy">Designed by Knowledge Centre, ODD Haleon</div>
+  <script>
+    document.getElementById("saveComponentBtn").addEventListener("click", function () {
+      // Collect data or perform validation here
+      // Then close the modal
+      const modal = bootstrap.Modal.getInstance(document.getElementById("componentModal"));
+      modal.hide();
+    });
+  </script>
+<script>
+  function showGrid() {
+    document.getElementById("additionalFormulations").style.display = "block";
+  }
+
+  // Show grid when "Add Component" modal is triggered
+  const addComponentBtn = document.querySelector('[data-bs-target="#componentModal"]');
+  if (addComponentBtn) {
+    addComponentBtn.addEventListener("click", showGrid);
+  }
+
+  // Show grid when "Search SKU Component" is clicked
+  document.getElementById("searchSkuBtn").addEventListener("click", showGrid);
+</script>
+
+
+</footer>
