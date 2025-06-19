@@ -1,0 +1,9 @@
+1.) Creat a application in react Js with good folder structure
+2.) All theme will be in white,black and #30ea03  ony these colour 
+3.) Project will be responsive for all screen mobile and desktop all
+4.)i will share the dummy  data also
+5.) in the page we will have the three filters CM Code,CM Description,Signoff status with search and reset button search will work on clik the button.
+6.)Below that filters we want the data table with pagination and next previous button
+7.) for dummy data i will share
+8.) i want a good design not like school project i want very professional design are you getting 
+9.) In a data table  we will have these CM Code,CM Description,Signoff status and one another field Add / View SKU  it will have the button on click the another page will be open  with detail related to it  
