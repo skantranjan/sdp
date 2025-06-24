@@ -1,0 +1,543 @@
+<!doctype html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datetimepicker.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link href="css/remix-icon.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="css/styles.css">
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="top-nav flex">
+    <img src="images/logo.png" alt="Haleon Logo" class="logoImage" data-themekey="#">
+    <h2>Sustainability Data Portal</h2>
+    <ul class="flex">
+      <li><a href="#"><i class="ri-home-5-line"></i> Home </a>
+      </li>
+      <li><a href="#"> <i class="ri-information-line"></i>
+          About</a></li>
+      <li><a href="#"><i class="ri-mail-line"></i> Contact</a></li>
+
+    </ul>
+
+
+  </div>
+
+
+  <div class="mainInternalPages">
+
+    <div class="commonTitle">
+      <div class="icon">
+        <i class="ri-file-list-3-fill"></i>
+      </div>
+      <h1>CM Detail</h1>
+    </div>
+
+    <div class="filters CMDetails">
+      <div class="row">
+        <div class="col-sm-12 ">
+          <ul>
+            <li><strong>CM Code: </strong> 9910189893</li>
+            <li> | </li>
+            <li><strong> CM Description: </strong> Description text</li>
+            <li> | </li>
+            <li><strong> Status: </strong> <span class="signed"> Signed</span></li>
+          </ul>
+
+          <!-- <ul class="CMBtns">
+                <li><h4>SKU Details</h4></li>
+                <li>
+                    <a href="" class="btnCommon btnGreen filterButtons" onclick="">
+                        <span>Add</span>
+                        <i class="ri-add-circle-line"></i>
+                    </a>
+
+                    <a href="" class="btnCommon btnBlack filterButtons" onclick="">
+                        <span>Edit</span>
+                        <i class="ri-pencil-line"></i>
+                    </a>
+                    <a href="" class="btnCommon btnDarkGrey filterButtons" onclick="">
+                        <span>Deactivate</span>
+                        <i class="ri-close-line"></i>
+                    </a>
+                </li>
+                
+            
+        </ul> -->
+        </div>
+
+
+
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="filters">
+          <ul>
+            <li>
+              <div class="fBold">Years</div>
+
+              <select class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </li>
+            <li>
+              <div class="fBold">SKU Code-Description</div>
+
+              <select class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </li>
+            <!-- <li>
+                            <div class="fBold">Signoff Status</div>
+                             
+                            <select class="form-control" >
+                                <option>1</option>Add/View SKU
+                                <option>2</option>
+                                <option>3</option>
+                            </select> 
+                        </li> -->
+            <li>
+              <a href="javascript:void(0)" class="btnCommon btnGreen filterButtons" onclick="">
+                <span>Search</span>
+                <i class="ri-search-line"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="javascript:void(0)" class="btnCommon btnBlack filterButtons" onclick="">
+                <span>Reset</span>
+                <i class="ri-refresh-line"></i>
+              </a>
+            </li>
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button class="add-sku-btn" onclick="openSKU()" style="background-color: #30ea03;">
+      Add SKU <i class="ri-add-circle-line"></i>
+    </button>
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-default">
+        <div class="panel-heading panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+          <p>
+            <a><strong>SKU-001</strong> || Description 1 </a>||  Is Active<input type="checkbox" name="option2" value="Option 2"><i class="ri-add-circle-line"></i>
+          </p>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse in">
+          <div class="panel-body">
+
+            <!-- <ul class="listNone">
+                  <li><strong>SKU Code: </strong> SKU001</li>
+                  <li><strong>SKU Name: </strong> Name 1</li>
+                  <li><strong>SKU Code: </strong> SKU001</li>
+                  <li><strong>SKU Description: </strong> Text</li>
+                  <li><strong>Purchased Quantity: </strong> 100</li>
+                  <li><strong>Status: </strong> <span class="signed">Active</li>
+                  </ul> -->
+            <p><strong>Reference SKU: </strong> SKU001</p>
+            <p><strong>Component Detail: </strong> Packaging Type <input type="radio" name="option" value="Option 1">
+              Material Type <input type="radio" name="option" value="Option 2">
+
+              <button class="add-sku-btn" onclick="openComponentModal()" style="background-color: #30ea03;">
+                Add Component <i class="ri-add-circle-line"></i>
+              </button>
+
+
+
+
+            </p>
+
+            <div class="table-responsive tableCommon tableGreen">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Actions</th>
+                      <th>Is Active</th>
+                    <th>Material Type</th>
+                    <th>Component Reference</th>
+                    <th>Component Code</th>
+                    <th>Component Description</th>
+                    <th>Valid From</th>
+                    <th>To</th>
+                    <th>Material Group</th>
+                    <th>QTV</th>
+                    <th>UoM</th>
+                    <th>Basic UoM</th>
+                    <th>Packaging Type</th>
+                    <th>Weight Type</th>
+                    <th>Unit Measure</th>
+                    <th>% Post Customer</th>
+                    <th>% Post Industrial</th>
+                    <th>Text 1</th>
+                    <th>Text 2</th>
+                    <th>Text 3</th>
+                    <th>Text 4</th>
+                    <th>Text 5</th>
+                    <th>Text 6</th>
+                    <th>Text 7</th>
+                    <th>Text 8</th>
+                    <th>Text 9</th>
+                    <th>Text 10</th>
+                    <th>Text 11</th>
+                    <th>Text 12</th>
+
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td><i class="ri-edit-line" onclick="openComponentModal()"></i>
+
+                      <i class="bi bi-pencil-square"></i>
+                      <i class="ri-eye-line"></i>
+                   
+                    </td>
+                    <td><input type="checkbox" name="option2" value="Option 2"></td>
+                    <td>Plastic</td>
+                    <td>CR-001</td>
+                    <td>C-1001</td>
+                    <td>Bottle Cap</td>
+                    <td>2023</td>
+                    <td>2024</td>
+                    <td>Bg-001</td>
+                    <td>10</td>
+                    <td>PCS</td>
+                    <td>PCS</td>
+                    <td>Primary</td>
+                    <td>Net</td>
+                    <td>g</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>Text 1</td>
+                    <td>Text 2</td>
+                    <td>Text 3</td>
+                    <td>Text 4</td>
+                    <td>Text 5</td>
+                    <td>Text 6</td>
+                    <td>Text 7</td>
+                    <td>Text 8</td>
+                    <td>Text 9</td>
+                    <td>Text 10</td>
+                    <td>Text 11</td>
+                    <td>Text 12</td>
+                  </tr>
+
+                  <tr>
+                    <td><i class="ri-edit-line"></i>
+
+                      <i class="bi bi-pencil-square"></i>
+                      <i class="ri-eye-line"></i>
+                   
+                    </td>
+                      <td><input type="checkbox" name="option2" value="Option 2"></td>
+                    <td>Plastic</td>
+                    <td>CR-001</td>
+                    <td>C-1001</td>
+                    <td>Bottle Cap</td>
+                    <td>2023</td>
+                    <td>2024</td>
+                    <td>Bg-001</td>
+                    <td>10</td>
+                    <td>PCS</td>
+                    <td>PCS</td>
+                    <td>Primary</td>
+                    <td>Net</td>
+                    <td>g</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>Text 1</td>
+                    <td>Text 2</td>
+                    <td>Text 3</td>
+                    <td>Text 4</td>
+                    <td>Text 5</td>
+                    <td>Text 6</td>
+                    <td>Text 7</td>
+                    <td>Text 8</td>
+                    <td>Text 9</td>
+                    <td>Text 10</td>
+                    <td>Text 11</td>
+                    <td>Text 12</td>
+                  </tr>
+
+                  <tr>
+                    <td><i class="ri-edit-line"></i>
+
+                      <i class="bi bi-pencil-square"></i>
+                      <i class="ri-eye-line"></i>
+                     
+                    </td>
+                      <td><input type="checkbox" name="option2" value="Option 2"></td>
+                    <td>Plastic</td>
+                    <td>CR-001</td>
+                    <td>C-1001</td>
+                    <td>Bottle Cap</td>
+                    <td>2023</td>
+                    <td>2024</td>
+                    <td>Bg-001</td>
+                    <td>10</td>
+                    <td>PCS</td>
+                    <td>PCS</td>
+                    <td>Primary</td>
+                    <td>Net</td>
+                    <td>g</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>Text 1</td>
+                    <td>Text 2</td>
+                    <td>Text 3</td>
+                    <td>Text 4</td>
+                    <td>Text 5</td>
+                    <td>Text 6</td>
+                    <td>Text 7</td>
+                    <td>Text 8</td>
+                    <td>Text 9</td>
+                    <td>Text 10</td>
+                    <td>Text 11</td>
+                    <td>Text 12</td>
+                  </tr>
+
+                  <tr>
+                    <td><i class="ri-edit-line"></i>
+
+                      <i class="bi bi-pencil-square"></i>
+                      <i class="ri-eye-line"></i>
+                     
+                    </td>
+                      <td><input type="checkbox" name="option2" value="Option 2"></td>
+                    <td>Plastic</td>
+                    <td>CR-001</td>
+                    <td>C-1001</td>
+                    <td>Bottle Cap</td>
+                    <td>2023</td>
+                    <td>2024</td>
+                    <td>Bg-001</td>
+                    <td>10</td>
+                    <td>PCS</td>
+                    <td>PCS</td>
+                    <td>Primary</td>
+                    <td>Net</td>
+                    <td>g</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>Text 1</td>
+                    <td>Text 2</td>
+                    <td>Text 3</td>
+                    <td>Text 4</td>
+                    <td>Text 5</td>
+                    <td>Text 6</td>
+                    <td>Text 7</td>
+                    <td>Text 8</td>
+                    <td>Text 9</td>
+                    <td>Text 10</td>
+                    <td>Text 11</td>
+                    <td>Text 12</td>
+                  </tr>
+
+
+                </tbody>
+
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+          <p>
+            <a><strong>SKU-002</strong>  Description 1  || Is Active<input type="checkbox" name="option2" value="Option 2"><i class="ri-add-circle-line"></i></a>
+          </p>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse">
+          <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+          <p>
+            <a><strong>SKU-003</strong>  <i class="ri-add-circle-line"></i></a>
+          </p>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse">
+          <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+  </div>
+
+
+
+  <!-- Modal Component -->
+  <div class="modal fade" id="componentModal" tabindex="-1" aria-labelledby="componentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white" style="background-color:#30ea03 !important">
+          <h5 class="modal-title" id="componentModalLabel">Add Component Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row g-3">
+              <!-- Begin Fields -->
+              <div class="col-md-6"><label>Material Type</label><input type="text" id="materialType"
+                  class="form-control">
+              </div>
+              <div class="col-md-6"><label>Component Reference</label><input type="text" id="componentReference"
+                  class="form-control"></div>
+              <div class="col-md-6"><label>Component Code</label><input type="text" id="componentCode"
+                  class="form-control"></div>
+              <div class="col-md-6"><label>Component
+                  Description</label><input type="text" id="validFrom" class="form-control"></div>
+              <div class="col-md-6"><label>Component
+                  Valid Date From</label><input type="text" id="validFrom" class="form-control"></div>
+
+              <div class="col-md-6"><label>Component Valid Date To</label><input type="text" id="validTo"
+                  class="form-control"></div>
+              <div class="col-md-6"><label>Component Material Group (Category)</label><input type="text"
+                  id="materialGroup" class="form-control"></div>
+              <div class="col-md-6"><label>Component QTY</label><input type="text" id="componentQty"
+                  class="form-control">
+              </div>
+              <div class="col-md-6"><label>Component UoM</label><input type="text" id="componentUom"
+                  class="form-control">
+              </div>
+              <div class="col-md-6"><label>Component Base UoM</label><input type="text" id="baseUom"
+                  class="form-control">
+              </div>
+              <div class="col-md-6"><label>Component Packaging Type</label><input type="text" id="packagingType"
+                  class="form-control"></div>
+              <div class="col-md-6"><label>Component Unit Weight Type</label><input type="text" id="weightType"
+                  class="form-control"></div>
+              <div class="col-md-6"><label>Component Unit of Measure</label><input type="text" id="unitMeasure"
+                  class="form-control"></div>
+              <div class="col-md-6"><label>% Mechanical Post-Consumer Recycled Content</label><input type="text"
+                  id="postConsumer" class="form-control"></div>
+              <div class="col-md-6"><label>% Mechanical Post-Industrial Recycled Content</label><input type="text"
+                  id="postIndustrial" class="form-control"></div>
+              <div class="col-md-6"><label>% Chemical Recycled Content</label><input type="text" id="chemicalRecycled"
+                  class="form-control"></div>
+              <div class="col-md-6"><label>% Bio-sourced?</label><input type="text" id="bioSourced"
+                  class="form-control">
+              </div>
+              <div class="col-md-6"><label>Material Structure (Multimaterials with % wt)</label><input type="text"
+                  id="materialStructure" class="form-control"></div>
+              <div class="col-md-6"><label>Component Packaging Colour/Opacity</label><input type="text"
+                  id="packagingColor" class="form-control"></div>
+              <div class="col-md-6"><label>Component Packaging Level</label><input type="text" id="packagingLevel"
+                  class="form-control"></div>
+              <div class="col-md-6"><label>Component Dimension (3D-LxWxH, 2D LxW)</label><input type="text"
+                  id="dimensions" class="form-control"></div>
+              <div class="col-md-6"><label>Packaging Specification Evidence</label><input type="text" id="specEvidence"
+                  class="form-control"></div>
+              <div class="col-md-6"><label>Evidence of Chemical Recycled or Bio-source</label><input type="text"
+                  id="evidence" class="form-control"></div>
+              <div class="col-md-6"><label>Last Updated Date</label><input type="text" id="lastUpdated"
+                  class="form-control"></div>
+              <div class="col-md-6">
+                <label>Proof of Evidence File <span class="text-danger">*</span></label>
+                <input type="file" id="evidenceFile" class="form-control">
+                <small class="text-muted" style="color: red !important;">Max file size: 50MB</small>
+              </div>
+
+
+              <!-- End Fields -->
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Modal Add SKU-->
+
+  <!-- Modal -->
+  <div class="modal fade" id="SKUModal" tabindex="-1" aria-labelledby="SKUModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white" style="background-color:#30ea03 !important">
+          <h5 class="modal-title" id="SKUModalLabel">Add SKU Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row g-3">
+              <!-- Begin Fields -->
+              <div class="col-md-6"><label>SKU</label><input type="text" id="materialType"
+                  class="form-control">
+              </div>
+              <div class="col-md-6"><label>SKU Desctiption</label><input type="text" id="componentReference"
+                  class="form-control"></div>
+            
+
+
+
+              <!-- End Fields -->
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer> </footer>
+
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+
+
+
+  <script>
+
+  </script>
+  <script>
+    function openComponentModal() {
+      $('#componentModal').modal('show');
+    }
+    function openSKU() {
+      $('#SKUModal').modal('show');
+    }
+  </script>
+
+</body>
+
+</html>
